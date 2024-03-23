@@ -1,13 +1,30 @@
-# Getting Started with Create React App
+# Getting Started with Payment Processing App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-This react app simulates a payment processing system that allows a user to select from multiple payment methods, \
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). \
+This React app simulates a payment processing system that allows a user to select from multiple payment methods, 
 input the required payment information, simulate a payment process and conclude with a confirmation page. 
+
+## Application Architecture
+The architecture is designed with scalability in mind, allowing for easy extension and maintenance. \
+**PaymentMethodSelector**: Allows a user to select a payment method . \
+**DynamicPaymentForm**: Renders the payment form corresponding to the selected payment method. \
+**ConfirmationPage**: Displays a confirmation message simulating a successful payment process. 
+
+The application uses a simple plugin system for methods, allowing easy addition of new payment methods without needing
+to alter the core codebase. Each payment method is a separate component. 
+
+A new payment method plugin can be added by 
+1. Creating the payment form component
+2. Registering the new payment method by adding it to the exported plugins object (plugin/index.js)
+3. Update the list of available payment method in the App component (App.js)
 
 ## Setup Instruction
 Clone the repository to your local machine. 
-### 
-
+### `https://github.com/ketiku/rapid-cents-challenge.git`
+Navigate to the project directory
+### `cd payment-processing-app`
+Install dependencies
+### `npm install`
 
 ## Available Scripts
 
